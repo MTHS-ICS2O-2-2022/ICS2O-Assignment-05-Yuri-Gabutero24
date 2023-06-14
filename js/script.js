@@ -7,12 +7,15 @@
 "use strict"
 
 function calculate() {
+  // get input value
   const term = parseInt(document.getElementById("multiply-term").value)
 
-  const sequence = []
+  // calculate first 5 terms
+  let sequence = []
   for (let i=0; i<5; i++) {
     sequence.push(term ** i);
   }
 
+  // output
   document.getElementById("answer").innerHTML = "The first 5 terms would be: " + sequence
 }
