@@ -11,11 +11,13 @@ function calculate() {
   const term = parseInt(document.getElementById("multiply-term").value)
 
   // calculate first 5 terms
-  let sequence = []
-  for (let i=0; i<5; i++) {
-    sequence.push(term ** i);
+  let answer = 1
+  let list = ""
+  for (let counter = 0; counter < 5; counter++) {
+    list = list + answer + ", "
+    answer = answer * term
   }
 
   // output
-  document.getElementById("answer").innerHTML = "The first 5 terms would be: " + sequence
+  document.getElementById("answer").innerHTML = "The first 5 terms would be: " + list + "..."
 }
